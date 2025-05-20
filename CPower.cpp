@@ -1,5 +1,5 @@
 /*! @file CPower.cpp
-    @brief Implementation of Power class 
+    @brief Implementation of Power class
     @author Emanuele Negrino and Carlo Toscano
 */
 
@@ -25,7 +25,7 @@ Power::Power(double k, double e) {
 Power::Power(const Power& p) {
 
     cout << "Power copy constructor" << endl;
-	
+
     k_coeff = p.k_coeff;
     e_coeff = p.e_coeff;
 }
@@ -58,9 +58,9 @@ bool Power::operator==(const Power& p) {
 /// @return False if exponent is between -1 and 1, otherways true
 bool controlExponent(double e) {
     if(e < 1 && e > -1){
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 /// @brief Sets the coefficients of the power function
